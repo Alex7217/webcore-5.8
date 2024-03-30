@@ -13,6 +13,7 @@
   <header class="header">
     
     <!--GROUP1-->
+    
     <div class="header__group1">
       <div class="header__burger header__icon-style">
         <img src="webc/burger.svg"alt="icon" class="image-style">
@@ -64,8 +65,6 @@
 
     <menu class="menu">
      <div class="menu__container">
-      <div class="menu__image-asideblock"><img src="webc/highlight.png">
-      </div>
       <div class="menu__title">
         <h1>Услуги и сервисы</h1>
       </div> 
@@ -74,25 +73,25 @@
   <!--BUTTONS-->
 
     <div class="menu__buttons">
-      <div class="menu__button1">
+      <div class="menu__repairs">
         <button class="menu__repair button-style">Ремонтируем бренды</button>
       </div>
-      <div class="menu__button2">
+      <div class="menu__extraservice">
         <button class="menu__extra-services button-style">Дополнительные услуги</button>
       </div>
-      <div class="menu__button2-1">
+      <div class="menu__apprepair">
         <button class="menu__apprepair button-style">Ремонтируемые устройства</button>
       </div>
-      <div class="menu__button3">
+      <div class="menu__listprices">
         <button class="menu__listprice button-style">Цены на услуги</button>
       </div>
-      <div class="menu__button4">
+      <div class="menu__adressservice">
         <button class="menu__adress-service button-style">Адреса сервисных центров</button>
       </div>
-      <div class="menu__button5">
+      <div class="menu__specialprice">
         <button class="menu__special-price button-style">Специальные цены</button> 
       </div>
-      <div class="menu__button6">
+      <div class="menu__review">
         <button class="menu__reviews button-style">Отзывы</button>
       </div>
 
@@ -103,21 +102,41 @@
   <main class="container">
     
       <!--text-->
-    <div class="container__content">
+    <div class="container__content" id="containerText">
       <p class="container__text">Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только  у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.<br><br>
           Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</p>
     </div>
   
-    <!--READ BUTTON-->
-    <div class="container__readbutton">
+     <!--READ BUTTON-->
+     <div class="container__readbutton hidden" id="readButton" onclick="toggleText()">
       <img src="./webc/ReadMore Copy.svg" alt="readMore" class="readmore-style">
     </div>
+    
     
     <!--PICTURE-->
     <div class="container__image">
       <img src="./webc/Picture Copy.svg" alt="picture" class="container__picture">
     </div>
+    
+
+
   </main>
+
+  
+  <script>
+    function toggleText() {
+      let text = document.getElementById("containerText");
+      text.classList.toggle("expanded");
+    }
+  </script>
+<script>
+function toggleText() {
+  let text = document.getElementById("containerText");
+  text.classList.toggle("expanded");
+  let readButton = document.getElementById("readButton");
+  readButton.classList.toggle("hidden");
+}
+</script>
 </nav>  
 </body>
 </html>
